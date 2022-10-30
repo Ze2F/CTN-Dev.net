@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* max-width: 100vw;
+    max-height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: #000;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.title {
+    display: inline-block;
+    padding: 16px;
+    width: 100vw;
+    letter-spacing: 5px;
+    font-size: 64px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.title:hover {
+    font-size: 72px;
+}
+
+.welcome {
+    display: inline-block;
+    padding: 16px;
+    width: 100vw;
+    letter-spacing: 8vw;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.welcome:hover {
+    letter-spacing: 1vw;
+}
+
+.nav {
+    display: inline-block;
+    padding: 16px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-link {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 26px;
+    transition-duration: 0.5s;
+}
+
+.nav-link:hover {
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
+.content {
+    margin: 16px;
+    width: 90vw;
+    height: 50vh;
+    transition-duration: 1s;
+    translate:
+    perspective(1500px)
+    rotateX(20deg);
+    transform: perspective(4500px) rotateY(10deg);
+    border-radius: 8px;
+    background-color: #00FA;
+    overflow-y: auto;
+}
+
+.content:hover { 
+    transform: perspective(4500px) rotateY(0deg);
+}
+
+
+.discord-logo {
+    width: 106px;
+    height: 120px;
+    transition: transform .7s ease;
+}
+
+.discord-logo:hover {
+    transform: rotate(360deg);
+}
