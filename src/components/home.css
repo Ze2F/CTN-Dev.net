@@ -1,0 +1,22 @@
+.home {
+    padding: 16px;
+}
+
+.home p {
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.home p:nth-child(odd):before {
+    content: '$ ';
+}
+
+.home p:last-child::after {
+    content: ' |';
+    animation: v-blink .75s infinite;
+}
+
+@keyframes v-blink {
+    from, to { color: #0000 }
+    50% { color: #FFFF; }
+}
