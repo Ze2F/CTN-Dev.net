@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react'
-import './home.css'
+import './home.sass'
 import React from 'react'
 
 const raw = [
-    "get https://ctn-gc.web.app",
-    "Home About Gallery Page Discord",
-    "get Discord",
-    "https://discord.gg/nk55jjg",
-    '',
+    'get https://ctn-gc.web.app',
+    'Home About Gallery Page Discord',
+    'get Discord',
+    'https://discord.gg/nk55jjg',
+    'hello',
+    'Hello Back',
+    ''
 ]
 
 const speed = 50
 
-const caltext = (limit) => {
+const text_time = (limit) => {
     let len = 0
     for (let i = 0; i < limit; i++) {
         len += raw[i].length
@@ -27,15 +29,14 @@ function Home() {
     useEffect(() => {
         raw.forEach((element,index) => {
             setTimeout(()=>{
-                setLine(prevState => ([...prevState, element]))
-                element.split("").forEach((c,i) => {
+                document.getElementById('element')?console.log():setLine(prevState => ([...prevState, element]))
+                element.split('').forEach((c,i) => {
                     setTimeout(()=>{
-                        document.getElementById(index).innerHTML !== raw[index]?
-                        document.getElementById(index).innerHTML += c:
-                        document.getElementById(index).innerHTML = raw[index]
+                        let doc = document.getElementById(index.toString())
+                        doc?doc.innerHTML !== raw[index]?doc.innerHTML += c:console.log():console.log()
                     },speed*i)
                 })
-            },index?((caltext(index))*speed+1000):10)
+            },index?((text_time(index))*speed+1000):10)
         })
     },[])
 

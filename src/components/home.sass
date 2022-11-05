@@ -1,0 +1,20 @@
+.home
+    &>p 
+        padding-left: 16px
+        padding-top: 8px
+        font-size: 30px
+        letter-spacing: 1px
+        &:nth-child(odd):before 
+            content: '$ '
+        &:nth-child(even):before 
+            content: '> '
+        &:last-child::after 
+            content: ' |'
+            animation: v-blink .75s infinite
+
+@keyframes v-blink
+    from, to
+        color: #0000 
+    50%
+        color: #FFFF
+

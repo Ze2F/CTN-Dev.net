@@ -1,0 +1,45 @@
+.main 
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding-left: 16px
+    padding-right: 16px 
+    height: 100%
+
+
+.content
+    margin: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    &>img 
+        width: 200px
+        height: 200px
+        border-radius: 50%
+        color: #00F
+    &>h3
+        font-size: 32px
+    &>p 
+        font-size: 24px
+
+
+@media screen and (max-width: 975px) 
+    .main 
+        flex-direction: column
+        height: unset
+    
+
+    .head
+        &>img 
+            width: 100px
+            height: 100px
+    
+
+    .head
+        &>h3 
+            display: none
+    
