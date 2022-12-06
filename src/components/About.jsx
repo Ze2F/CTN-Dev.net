@@ -6,11 +6,10 @@ function About() {
             <div className='main'>
                 <div className='content'>
                     <img src='/assets/image/13.jpg' alt='' width={100} height={200}/>
-                    <h3>V - Image</h3>
                 </div>
                 
                 <div className='content'>
-                    <h3>Who am I?</h3>
+                    <h2>Who am I?</h2>
                     <br />
                     <p>Chotinat Ngovan</p>
                     <br />

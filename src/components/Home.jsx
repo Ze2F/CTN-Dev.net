@@ -3,12 +3,10 @@ import './home.sass'
 import React from 'react'
 
 const raw = [
-    'get https://ctn-gc.web.app',
-    'Home About Gallery Page Discord',
-    'get Discord',
-    'https://discord.gg/nk55jjg',
-    'hello',
-    'Hello Back',
+    'Hello',
+    'Welcome to CTN-GC :)',
+    'get ctn-gc.web.app',
+    'Home About Gallery Project Discord',
     ''
 ]
 
@@ -29,7 +27,7 @@ function Home() {
     useEffect(() => {
         raw.forEach((element,index) => {
             setTimeout(()=>{
-                document.getElementById('element')?console.log():setLine(prevState => ([...prevState, element]))
+                document.getElementById('element')?console.log():setLine(prevState => ([...prevState, index]))
                 element.split('').forEach((c,i) => {
                     setTimeout(()=>{
                         let doc = document.getElementById(index.toString())

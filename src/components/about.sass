@@ -1,28 +1,27 @@
 .main 
     display: flex
     flex-direction: row
-    justify-content: center
-    align-items: center
-    text-align: center
-    padding-left: 16px
-    padding-right: 16px 
     height: 100%
-
+    background-color: red
+    border-radius: 64px
+    transform: perspective(4500px) rotateY(10deg)
+    transition-duration: 1s
+    &:hover
+        transform: perspective(4500px) rotateY(0deg)
+    &>:nth-child(1)
+        padding: 64px
+    &>:nth-child(2)
+        flex: 1
 
 .content
     margin: auto
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
-    text-align: center
     &>img 
         width: 200px
         height: 200px
         border-radius: 50%
         color: #00F
-    &>h3
-        font-size: 32px
     &>p 
         font-size: 24px
 
@@ -42,4 +41,3 @@
     .head
         &>h3 
             display: none
-    
