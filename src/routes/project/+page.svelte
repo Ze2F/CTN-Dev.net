@@ -1,9 +1,9 @@
 <svelte:head>
-  <title>CTN - About</title>
+  <title>CTN - Project</title>
   <meta name="description" content="About this app" />
 </svelte:head>
 
 <section>
-  <h1>About me</h1>
+  <h1>Project List</h1>
   <pre>&emsp;Content arrive soon.</pre>
 </section>
