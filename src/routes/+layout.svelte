@@ -15,13 +15,15 @@
           <a class:active={$page.url.pathname == "/"} href="/">Home</a>
         </li>
         <li>
-          <a class:active={$page.url.pathname == "/about"} href="/about"
-            >About</a
+          <a
+            class:active={$page.url.pathname.startsWith("/about")}
+            href="/about">About</a
           >
         </li>
         <li>
-          <a class:active={$page.url.pathname == "/project"} href="/project"
-            >Project</a
+          <a
+            class:active={$page.url.pathname.startsWith("/project")}
+            href="/project">Project</a
           >
         </li>
       </ul>
