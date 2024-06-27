@@ -154,6 +154,10 @@ section h1:hover {
 		flex-direction: column;
 		gap: 4px;
 	}
+	
+	main {
+		min-height: 0;
+	}
 
 	aside {
 		width: 90vw;
@@ -162,7 +166,33 @@ section h1:hover {
 		transform: none;
 	}
 
-	main {
-		min-height: 0;
+	.aside-body ul {
+		flex-direction: row;
+		gap: 0;
+		padding: 0 16px;
+		text-align: center;
 	}
+
+	.aside-body a {
+		display: inline-block;
+		font-size: 16px;
+		padding: 0;
+		height: 1rem;
+	}
+
+	.aside-body a:first-letter, .aside-body a>img{
+		font-size: 2rem;
+	}
+
+	.aside-body a:hover,
+	aside .active {
+		font-size: 2rem;
+  		letter-spacing: normal;
+  	}
+
+	aside .active::after {
+		content: none;
+		animation: cursor-blink 0.75s infinite;
+	}
+	
 }
