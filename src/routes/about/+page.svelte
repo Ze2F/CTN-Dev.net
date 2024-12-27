@@ -1,6 +1,5 @@
 <svelte:head>
   <title>CTN - About</title>
-  <meta name="description" content="About this app" />
 </svelte:head>
 
 <section>
