@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@theme {
+  --color-background: #0f0f2f;
+  --color-foreground: #4e4eff;
+  --color-primary: #f0f0f0;
+  --color-secondary-ctn: #c0c0c0;
+}
+
+@layer base {
+
+  body {
+    @apply font-sans bg-background;
+  }
+
+  aside {
+    @apply w-80 flex flex-col justify-between bg-foreground rounded-md h-screen p-4 fixed left-0 top-0 bottom-0 duration-100 z-50 py-4;
+    transform: perspective(650px) rotateY(10deg) scale(92%) translateX(-80%);
+
+    &:hover {
+      transform: rotateY(0) scale(1);
+    }
+
+    &::after {
+      @apply content-[''] absolute w-full h-full left-0 right-0 top-0 bottom-0 bg-[#0008] rounded-md z-[-1];
+    }
+
+    &>ul {
+      @apply flex flex-col list-none;
+
+      &>li {
+        @apply my-1 text-2xl duration-1000 ease-in-out;
+
+        &:hover {
+          @apply tracking-[8px];
+        }
+
+        &>input {
+          @apply absolute left-0 opacity-0 w-full cursor-pointer;
+
+          &:checked ~ label {
+            @apply text-foreground bg-secondary-ctn tracking-[8px] animate-[grow_4s_infinite];
+
+            &>span:before {
+              @apply content-['>'] animate-[cursor-blink_1s_infinite];
+            }
+          }
+        }
+
+        &>label {
+          @apply flex justify-between w-full p-2 rounded-md duration-1000 select-none cursor-pointer;
+          
+          &>div>svg {
+            @apply h-8 w-8;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    @apply min-h-dvh pl-20 pr-4 max-md:pr-2 md:pr-20 bg-background;
+
+    &>header {
+      @apply text-center text-2xl font-bold text-primary;
+
+      &::after {
+        @apply content-[''] block h-[1px] bg-primary my-8;
+      }
+    }
+    
+    & .markdown-body {
+      @apply prose prose-invert m-auto pt-10 pb-20;
+
+      & .header-anchor {
+        @apply text-foreground no-underline;
+      }
+
+      & h1 {
+        @apply text-3xl font-bold text-primary pt-8;
+      }
+      
+      & table {
+        @apply table table-sm;
+      }
+    }
+  }
+
+  .cookie {
+    @apply sticky top-4 mb-4 max-w-4xl z-[100];
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+}
+
+@keyframes grow {
+
+  0%,
+  to {
+    box-shadow: 0px 4px 4px;
+  }
+  50% {
+    box-shadow: 0;
+  }
+}

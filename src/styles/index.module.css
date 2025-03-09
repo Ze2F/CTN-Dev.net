@@ -1,0 +1,15 @@
+@reference "tailwindcss";
+
+.container {
+  @apply relative h-screen overflow-auto;
+  scroll-snap-type: y mandatory;
+
+  & .panel {
+  @apply relative flex flex-col items-center justify-center h-screen snap-center;
+  
+    & .title {
+      @apply text-4xl font-bold;
+    }
+
+  }
+}

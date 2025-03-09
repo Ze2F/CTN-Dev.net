@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+
+.container {
+  @apply md:m-auto pt-10 pb-16 md:w-[720px];
+
+  & > ul {
+    @apply flex flex-wrap gap-8;
+
+    & > li {
+      @apply w-full;
+      
+      & > div {
+        @apply md:hover:scale-[1.1] transition-all duration-300 ease-in-out;
+
+        & h2 {
+          @apply max-md:flex-col;
+        }
+      }
+    }
+  }
+}
