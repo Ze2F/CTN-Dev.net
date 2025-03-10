@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Sidebar />
     </aside>
     <main>
-      <Cookie />
+      {/* <Cookie /> */}
       <Component {...pageProps} />
     </main>
   </>;
