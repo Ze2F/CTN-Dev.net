@@ -1,8 +1,7 @@
 import PageMarkdown from '@/components/page.markdown';
 import { useEffect, useState } from 'react';
 import style from '@/styles/projects.module.css';
-import ProjectItem, { IProjectItemProps } from '@/components/project.list';
-import { title } from 'process';
+import ProjectItem, { IProjectItemProps, statusStyle, linkStyle } from '@/components/project.list';
 
 const Projects = () => {
 
@@ -11,33 +10,33 @@ const Projects = () => {
     setProjects([
       {
         title: 'Roblox Card Games',
-        status: 'Working',
-        statusStyle: 'warning',
+        status: 'Pause',
+        statusStyle: statusStyle.warning,
         description: 'A Roblox Server',
         img: '/assets/images/78f30d15-ef74-493f-84e8-fbd9885d2ee4.png',
       },
       {
         title: 'SUS Cafe',
         status: 'Pause',
-        statusStyle: 'warning',
+        statusStyle: statusStyle.warning,
         description: 'A cute cafe web application develop by vue.js',
       },
       {
         title: 'Gems Stone',
         status: 'Pause',
-        statusStyle: 'warning',
+        statusStyle: statusStyle.warning,
         description: 'Website to showcase products named by gemstones.',
         moreDetails: '',
       },
       {
         title: 'Horizon Fall Minecraft Server',
         status: 'Server is completely closed',
-        statusStyle: 'error',
+        statusStyle: statusStyle.error,
         description: 'A Minecraft Server',
         img: '/assets/images/589d3af8-02bc-47b6-a33f-81aff84b1baa.jpg',
         link: 'https://web.facebook.com/HorizonFallMC/',
         linkText: 'More',
-        linkStyle: 'info',
+        linkStyle: linkStyle.error,
       }
     ]);
   }, []);

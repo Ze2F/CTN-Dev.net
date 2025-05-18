@@ -2,6 +2,10 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
 @theme {
   --color-background: #0f0f2f;
   --color-foreground: #4e4eff;

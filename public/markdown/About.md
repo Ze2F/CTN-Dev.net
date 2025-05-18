@@ -6,13 +6,14 @@ Welcome to my profile and thank you for reading. I'm a developer passionate abou
 
 | Contact Information | Details |
 |-------------------|---------|
-| Address | 47/1, Lam Sai, Lam Luk Ka, Phathumtani, 12150 |
-| Phone | +66 91 094 9035 |
-| Email | [Ze2F@pm.me](mailto:Ze2F@pm.me) |
+| Address | ?, Lam Luk Ka, Phathumtani, 12150 |
+| Phone | ? |
+| Email | ? |
 | Discord | [@Ze2F](https://discord.com/users/240041893373804555) |
 | Website | <https://ctn-dev.net> |
 | Facebook | [Chotinat Ngovan](https://web.facebook.com/CTN.Ze) |
 | Github | [Ze2F](https://github.com/Ze2F) |
+*? Please contact me for hidden information*
 
 ## Skills
 

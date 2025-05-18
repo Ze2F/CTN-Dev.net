@@ -1,15 +1,37 @@
 import { FC } from 'react';
 
+export enum statusStyle {
+  primary = 'badge-primary',
+  secondary = 'badge-secondary',
+  accent = 'badge-accent',
+  neutral = 'badge-neutral',
+  info = 'badge-info',
+  success = 'badge-success',
+  warning = 'badge-warning',
+  error = 'badge-error',
+}
+
+export enum linkStyle {
+  primary = 'btn-primary',
+  secondary = 'btn-secondary',
+  accent = 'btn-accent',
+  neutral = 'btn-neutral',
+  info = 'btn-info',
+  success = 'btn-success',
+  warning = 'btn-warning',
+  error = 'btn-error',
+}
+
 export interface IProjectItemProps {
   title: string;
   status: string;
-  statusStyle?: string;
+  statusStyle?: statusStyle;
   description: string;
   moreDetails?: string;
   img?: string;
   link?: string;
   linkText?: string;
-  linkStyle?: string;
+  linkStyle?: linkStyle;
 }
 
 const ProjectItem: FC<IProjectItemProps> = ({
@@ -27,7 +49,7 @@ const ProjectItem: FC<IProjectItemProps> = ({
       }
       <div className="card-body">
         <h2 className="card-title">{title}
-          <div className={`badge badge-${statusStyle}`}>{status}</div>
+          <div className={`badge ${statusStyle}`}>{status}</div>
         </h2>
         <p>{description}
         </p>
@@ -38,7 +60,7 @@ const ProjectItem: FC<IProjectItemProps> = ({
         {
           !(link) ||
           < div className="card-actions justify-end">
-            <a className={`btn btn-${linkStyle}`} target='_blank' href={link}>{linkText}</a>
+            <a className={`btn ${linkStyle}`} target='_blank' href={link}>{linkText}</a>
           </div>
         }
       </div>
