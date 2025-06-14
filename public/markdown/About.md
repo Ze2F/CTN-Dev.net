@@ -68,7 +68,7 @@ Welcome to my profile and thank you for reading. I'm a developer passionate abou
 
 ### Software Developer | [Asia Energy Technology Co.,Ltd.](http://www.asiaenergy.co.th/)
 
-*Duration: April 2024 - March 2025 (1 Year Contract)*
+*Duration: April 2024 - Now (Contract)*
 
 **Key Achievements:**
 

@@ -39,7 +39,7 @@ const ProjectItem: FC<IProjectItemProps> = ({
 }) => {
 
   return (
-    < div className="card bg-base-100 image-full shadow-sm" >
+    < div className="card bg-[#0000ff2f] image-full shadow-sm text-primary-x" >
       {
         !(img) ||
         <figure>
