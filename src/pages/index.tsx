@@ -2,6 +2,7 @@ import PageMarkdown from '@/components/page.markdown';
 import { ChangeEvent, useEffect, useState } from 'react';
 import style from '@/styles/index.module.css';
 import { useRouter } from 'next/navigation';
+import NewYearContainer from '@/components/NewYear2026/Container';
 
 const Index = () => {
   const router = useRouter();
@@ -13,6 +14,12 @@ const Index = () => {
   return (
     <>
       <div className={style.container}>
+        <div className={style.panel} id='#0'>
+          <NewYearContainer />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 absolute bottom-10 animate-bounce">
+            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </div>
         <div className={style.panel} id='#1'>
             <h1 className={style.title}>Hi! Welcome to CTN Dev website.</h1>
           <p>Please scroll down. </p>

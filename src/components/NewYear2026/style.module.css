@@ -1,0 +1,140 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  background-color: #000000A0;
+}
+
+.year2025 {
+    font-size: 12rem;
+    font-weight: 800;
+    color: #a47864;
+    padding: 1rem 4rem;
+    text-shadow: 0 0 20px rgba(149, 124, 133, 8);
+    transition: all 1s ease-in-out;
+}
+
+.year2025:hover {
+    text-shadow: 0 0 40px rgba(149, 124, 133, 8);
+}
+
+.label2025 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 2rem;
+    color: #b58670;
+}
+
+.timer2025 {
+    font-size: 6rem;
+    font-weight: 300;
+    font-family: monospace;
+    color: #a7887a;
+    margin-top: 1rem;
+    text-shadow: 0 0 12px rgba(149, 124, 133, 8);
+    background: #957c7150;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+}
+
+.calibrationWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    animation: fadeIn 5s ease-out;
+}
+
+.label2026 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    margin-top: 2rem;
+    color: #F0EEE9;
+}
+
+.year2026 {
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(to right, #F0EEE9, #E3DFD5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px #F0EEE9);
+    animation: pulseGlow 3s infinite alternate;
+    margin: 2rem 0;
+}
+
+.statusText2026 {
+    font-size: 2rem;
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+.testButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #666;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 50;
+}
+
+.testButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.fadeOut {
+    animation: fadeOut 2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; filter: blur(0); }
+    to { opacity: 0; filter: blur(10px); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes pulseGlow {
+    0% { filter: drop-shadow(0 0 30px #F0EEE9A0); }
+    100% { filter: drop-shadow(0 0 60px rgba(0, 212, 255, 0.6)); }
+}
